@@ -35,7 +35,7 @@ const usersSchema = Schema(
   { timestamps: true }
 );
 
-usersSchema.pre('save', async function (next){
+usersSchema.pre('save', async function (next){//sebelum menyimpan ke db password akan di modifikasi agar di enkripsi
     const User = this;
     if (User.isModified('password')) {
         User.password = await bcrypt.hash(User.password,12);

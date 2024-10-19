@@ -55,7 +55,7 @@ const EventSchema = new mongoose.Schema(
       default: 'Draft',
     },
     tickets: {
-      type: [ticketCategoriesSchema],
+      type: [ticketCategoriesSchema],//makukan scema dari tiket kategori karena 1 tiket tidak dipakai di event yang lain
       required: true,
     },
     image: {

@@ -19,7 +19,7 @@ const createOrganizer = async (req) => {
         role,
     });
 
-    delete users._doc.password;
+    delete users._doc.password; //untuk menghilangkan field password ketika hasil dikembalikan
 
     return users;
 
